@@ -1,9 +1,7 @@
 body
 {
-  /* you better change this stuff */
-  margin: 300px;
   font-family: papyrus;
-  color: red;
-  background-color: green;
-  font-size: 300%;
+  color: black;
+  background-color: white;
+  font-size: 100%;
 }
