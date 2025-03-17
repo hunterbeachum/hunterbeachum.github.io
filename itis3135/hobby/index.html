@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Corner</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #FADADD;
+            --secondary-color: #C5E8D7;
+            --tertiary-color: #D7C6E6;
+            --text-color: #444;
+            --nav-hover: #f8bac0;
+            --background-gradient: linear-gradient(135deg, #FADADD 0%, #f8bac0 100%);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--background-gradient);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 20px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin: 0;
+            padding: 30px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            padding: 8px 15px;
+            background: var(--tertiary-color);
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background: var(--nav-hover);
+            color: white;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            font-size: 1.1rem;
+        }
+
+        main section {
+            display: none;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        main section a {
+            color: var(--text-color);
+        }
+
+        main section figcaption {
+            font-size: 1rem;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            background: white;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>All About Cats</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSelection('what')">Home</a></li>
+                <li><a href="#" onclick="showSelection('who')">About Me</a></li>
+                <li><a href="#" onclick="showSelection('when')">About Cats</a></li>
+                <li><a href="#" onclick="showSelection('where')">Cat Behaviors</a></li>
+                <li><a href="#" onclick="showSelection('how')">Cat Foods</a></li>
+                <li><a href="#" onclick="showSelection('why')">"The Naming of Cats"</a></li>
+                <li><a href="#" onclick="showSelection('prompts')">AI Prompts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="what">
+            <h2>Home</h2>
+            <p>Welcome to my page about cats.</p>
+            <p>Here, I'll share my personal favorite cat features.</p>
+            <figure>
+                <img src="images/index_cat.png" alt="Cats!">
+                <figcaption>Image credit: <a href="https://www.irasutoya.com/">Irasutoya</a></figcaption>
+            </figure>
+        </section>
+
+        <section id="who">
+            <h2>About Me</h2>
+            <p>Hello!  My name is Hunter Beachum and I am a big fan of cats.</p>
+            <p>Thank you for taking the time to visit my page and appreciate cats with me.</p>
+            <p>As thanks, here is a picture of my beloved Miss Kitty.</p>
+            <p>I was originally going to name her Pumpkin since her birthday is on Halloween, but the name "Miss Kitty" stuck.</p>
+            <figure>
+                <img src="images/miss_kitty.jpg" alt="Miss Kitty Mousehammer">
+                <figcaption>Image credit: Me</figcaption>
+            </figure>
+        </section>
+
+        <section id="when">
+            <h2>About Cats</h2>
+            <p>Cats are beloved around the world for their playful and curious personalities.</p>
+            <p>Furthermore, they are often culturally associated with good fortune and protection.</p>
+            <p>Cats are known to have been treated as a sacred animal in ancient Egypt.</p>
+            <p>This may be because of their value to ancient people in pest control, protecting their homes and supplies.</p>
+            <figure>
+                <img src="images/money_cat.png" alt="Money Cat Money Cat">
+                <figcaption>Image credit: <a href="https://www.irasutoya.com/">Irasutoya</a></figcaption>
+            </figure>
+        </section>
+
+        <section id="where">
+            <h2>Cat Behavior</h2>
+            <p>Cats behavior is often misunderstood, leading to conflict between cats and people.</p>
+            <p>The aloof, standoffish behavior of cats is a product of their evolution.</p>
+            <p>When a cat apparently expresses disinterest in a person, it may actually be a sign that the cat feels safe around them.</p>
+            <p>Furthermore, when a cat squints at a person, it is often interpreted as scheming or disdain.</p>
+            <p>In reality, this behavior is a demonstration of trust.  The cat is likely thinking, "I can lower my guard around you."</p>
+            <figure>
+                <img src="images/cat_warning.png" alt="Tense Cat">
+                <figcaption>Image credit: <a href="https://www.irasutoya.com/">Irasutoya</a></figcaption>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>Cat Foods</h2>
+            <p>It is important to feed your cat properly!  They rely on your understanding for proper nutrition.</p>
+            <p>Cats in the wild find much of their water intake through the prey they hunt.</p>
+            <p>Thus, wet foods are ideal for cats to ensure they maintain an appropriate level of hydration.</p>
+            <p>That said, it is very important that cats eat enough, so my opinion is that the best food for a cat is whatever they like the most!</p>
+            <figure>
+                <img src="images/cat_can.png" alt="Cat Can">
+                <figcaption>Image credit: <a href="https://www.irasutoya.com/">Irasutoya</a></figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>The Naming of Cats by T.S. Eliot</h2>
+            <p>The Naming of Cats is a difficult matter,
+                It isn't just one of your holiday games;</p>
+            <p>You may think at first I'm as mad as a hatter
+                When I tell you, a cat must have THREE DIFFERENT NAMES.</p>
+            <p>First of all, there's the name that the family use daily,
+                Such as Peter, Augustus, Alonzo, or James,</p>
+            <p>Such as Victor or Jonathan, George or Bill Bailey—
+                All of them sensible everyday names.</p>
+            <p>There are fancier names if you think they sound sweeter,
+                Some for the gentlemen, some for the dames:</p>
+            <p>Such as Plato, Admetus, Electra, Demeter—
+                But all of them sensible everyday names,</p>
+            <p>But I tell you, a cat needs a name that's particular,
+                A name that's peculiar, and more dignified,</p>
+            <p>Else how can he keep up his tail perpendicular,
+                Or spread out his whiskers, or cherish his pride?</p>
+            <p>Of names of this kind, I can give you a quorum,
+                Such as Munkustrap, Quaxo, or Coricopat,</p>
+            <p>Such as Bombalurina, or else Jellylorum—
+                Names that never belong to more than one cat.</p>
+            <p>But above and beyond there's still one name left over,
+                And that is the name that you never will guess;</p>
+            <p>The name that no human research can discover—
+                But THE CAT HIMSELF KNOWS, and will never confess.</p>
+            <p>When you notice a cat in profound meditation,
+                The reason, I tell you, is always the same:</p>
+            <p>His mind is engaged in a rapt contemplation
+                Of the thought, of the thought, of the thought of his name:</p>
+            <p>His ineffable effable
+                Effanineffable</p>
+            <p>Deep and inscrutable singular name.</p>
+            <figure>
+                <img src="images/silence_cat.png" alt="Effanineffable Cat">
+                <figcaption>Image credit: <a href="https://www.irasutoya.com/">Irasutoya</a></figcaption>
+            </figure>
+        </section>
+
+        <section id="prompts">
+            <h2>AI Prompts</h2>
+            <p>The following prompts were used with AI to help gather resources and solve JS issues:</p>
+            <p>"What is a good, importable font for a page like this?  Provide just the css line to import it."</p>
+            <p>"How can I set the section with the id "what" to be given the active class on page load?"</p>
+            <p>"Give me three pastel colors to use as a theme, and slightly darker versions of each."</p>
+            <figure>
+                <img src="images/cat_bot.png" alt="Cat bot">
+                <figcaption>Image credit: <a href="https://www.irasutoya.com/">Irasutoya</a></figcaption>
+            </figure>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy;2025 All rights reserved.  Designed by <a href="../beachumenterprises.com/">Beachum Enterprises</a>.</p>
+    </footer>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script>
+        function showSelection(id) {
+            document.querySelectorAll('main section[id]').forEach((section) => {
+                section.classList.toggle('active', section.id === id);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('main section[id]').forEach((section) => section.classList.remove('active'));
+            document.getElementById('what').classList.add('active');
+        });
+    </script>
+</body>
