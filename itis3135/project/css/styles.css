@@ -1,0 +1,566 @@
+/* 
+ * Weller's Fine Art - Main Stylesheet
+ * Author: Hunter Beachum
+ * Last Updated: 2023
+ */
+
+/* ===== CSS Variables ===== */
+:root {
+  /* Colors */
+  --color-primary: #0f172a;
+  --color-secondary: #475569;
+  --color-text: #1e293b;
+  --color-text-light: #f1f5f9;
+  --color-background: #f8fafc;
+  --color-white: #ffffff;
+  
+  /* Typography */
+  --font-primary: 'Playfair Display', serif;
+  --font-secondary: 'Montserrat', sans-serif;
+  --font-size-base: 16px;
+  
+  /* Spacing */
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  
+  /* Layout */
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+}
+
+/* ===== Reset & Base Styles ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #f8fafc;
+  color: #1e293b;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p { margin-bottom: 1.5rem; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul { list-style: none; }
+
+/* ===== Layout ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  padding: 1.5rem 0;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo p {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+nav {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: #1e293b;
+  padding: 1rem;
+}
+
+nav a:hover, nav a.active {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #475569;
+}
+
+/* ===== Gallery Introduction ===== */
+.gallery-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2rem 1rem;
+}
+
+.gallery-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.gallery-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ===== Current Exhibition ===== */
+.exhibition-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.exhibition-image img {
+  width: 100%;
+}
+
+.exhibition-date {
+  color: #475569;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Featured Artists ===== */
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.artist-item {
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.artist-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* ===== Artists Page ===== */
+.artists-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2rem 1rem;
+}
+
+.artists-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.artists-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.artist-medium {
+  font-style: italic;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.artist-application {
+  text-align: center;
+  max-width: 800px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.artist-application h2 {
+  margin-bottom: 1rem;
+}
+
+.artist-application p {
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Gallery Page ===== */
+.gallery-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2rem 1rem;
+}
+
+.gallery-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.gallery-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery-item-info {
+  padding: 1rem;
+}
+
+.gallery-item-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.artist-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.artwork-medium {
+  font-style: italic;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+/* ===== Past Exhibitions Page ===== */
+.past-exhibitions-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2rem 1rem;
+}
+
+.past-exhibitions-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.past-exhibitions-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.exhibitions-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.exhibition-item {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.exhibition-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -1.5rem;
+  width: 2px;
+  height: 3rem;
+  background-color: #e2e8f0;
+  transform: translateX(-50%);
+}
+
+.exhibition-date {
+  text-align: center;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.exhibition-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.exhibition-content img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.exhibition-details h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.exhibition-artists {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.exhibition-description {
+  line-height: 1.6;
+}
+
+/* ===== Contact Page ===== */
+.contact-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2rem 1rem;
+}
+
+.contact-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-top: 0.25rem;
+}
+
+.info-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.info-item p {
+  margin-bottom: 0.25rem;
+  color: #475569;
+}
+
+.contact-form-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h3 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .exhibition-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .exhibition-content img {
+    height: 200px;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.social-icons a:hover {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== Media Queries ===== */
+@media screen and (max-width: 1200px) {
+  .artwork-grid,
+  .artists-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.3rem; }
+  
+  .exhibition-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .artwork-grid,
+  .artists-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.2rem; }
+  body { font-size: 1rem; }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+} 
