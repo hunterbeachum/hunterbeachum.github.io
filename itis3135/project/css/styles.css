@@ -68,7 +68,7 @@ header {
   margin-bottom: 1rem;
 }
 
-.logo h1 {
+.logo .logo-text {
   margin-bottom: 0.5rem;
   font-size: 2.8rem;
   letter-spacing: 1px;
