@@ -7,12 +7,18 @@
     <title>Project Overview - Weller's Fine Art</title>
     <link rel="stylesheet" href="styles/default.css">
     <style>
-        .wireframe-grid {
+        main {
+            max-width: 65%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .wireframe-layout {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: clamp(1rem, 2vw, 2rem);
             margin: clamp(1rem, 2vw, 2rem) auto;
-            max-width: min(100%, 120rem);
+            max-width: 100%;
             padding: 0 clamp(1rem, 2vw, 2rem);
         }
 
@@ -20,10 +26,12 @@
             border: 1px solid #ddd;
             padding: clamp(0.75rem, 1.5vw, 1.5rem);
             border-radius: 0.5rem;
-            width: 100%;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease-in-out;
+            margin: 0 0 1rem 0;
+            color: #2c3e50;
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
         }
 
         .wireframe-item img {
@@ -31,15 +39,11 @@
             height: auto;
             display: block;
             margin: 0 auto;
-            width: 100%;
+            width: auto;
             border-radius: 0.25rem;
+            object-fit: contain;
         }
 
-        .wireframe-item h3 {
-            margin: 0 0 1rem 0;
-            color: #2c3e50;
-            font-size: clamp(1rem, 1.5vw, 1.25rem);
-        }
 
         .sitemap-container {
             display: flex;
@@ -89,7 +93,7 @@
         <section>
             <h2>Wireframe:</h2>
             
-            <div class="wireframe-grid">
+            <div class="wireframe-layout">
                 <div class="wireframe-item">
                     <h3>Landing Page Wireframe</h3>
                     <img src="images/wireframe1.PNG" alt="Landing Page Wireframe" width="400" height="300">
