@@ -1,335 +1,129 @@
-/* 
- * Default Stylesheet for Weller's Fine Art
- * Author: Hunter Beachum
- * Last Updated: 2023
- */
-
-/* ===== CSS Variables ===== */
-:root {
-  /* Colors */
-  --color-primary: #0f172a;
-  --color-secondary: #475569;
-  --color-accent: #94a3b8;
-  --color-text: #1e293b;
-  --color-text-light: #f1f5f9;
-  --color-background: #f1f5f9;
-  
-  /* Typography */
-  --font-primary: Tahoma, Arial, sans-serif;
-  --font-size-base: 16px;
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-body: 1.2rem;
-  --font-size-small: 0.9rem;
-  
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 2.5rem;
-  
-  /* Layout */
-  --container-max-width: 1200px;
-  --container-padding: 1rem;
-  
-  /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  
-  /* Border Radius */
-  --border-radius-sm: 5px;
-  --border-radius-md: 8px;
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-  /* Text Alignment */
-  --text-align-default: left;
-  --text-align-header: center;
-}
-
-/* ===== Reset & Base Styles ===== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: var(--font-size-base);
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: var(--font-primary);
+  font-family: Tahoma, Arial, sans-serif;
   line-height: 1.6;
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: #f1f5f9;
+  color: #1e293b;
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  text-align: var(--text-align-default);
 }
 
-/* ===== Typography ===== */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: var(--spacing-md);
-  line-height: 1.2;
-  text-align: var(--text-align-default);
+header {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 h1 {
-  font-size: var(--font-size-h1);
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
-h2 {
-  font-size: var(--font-size-h2);
-  font-weight: 600;
-}
-
-p {
-  margin-bottom: var(--spacing-md);
-  text-align: var(--text-align-default);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color var(--transition-normal);
-}
-
-/* ===== Layout ===== */
-header {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  text-align: var(--text-align-header);
-  padding: var(--spacing-lg) 0;
-}
-
-header h1, header h2, header h3, header h4, header h5, header h6, header p {
-  text-align: var(--text-align-header);
-}
-
-main {
-  flex: 1;
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: var(--spacing-lg) var(--container-padding);
-  text-align: var(--text-align-default);
-}
-
-footer {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  text-align: var(--text-align-header);
-  padding: var(--spacing-lg) 0;
-  margin-top: auto;
-}
-
-/* ===== Navigation ===== */
-nav {
-  background-color: var(--color-accent);
-  padding: var(--spacing-sm) 0;
-  text-align: var(--text-align-header);
-  border-top: 3px solid var(--color-secondary);
-  border-bottom: 3px solid var(--color-secondary);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-}
-
-nav a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-weight: 600;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  margin: 0 var(--spacing-xs);
-  display: inline-block;
-  transition: all var(--transition-normal);
-  border-radius: var(--border-radius-sm);
-}
-
-nav a:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-text-light);
-}
-
-/* ===== Content Elements ===== */
 ul {
   margin: auto;
-  text-align: var(--text-align-default);
+  text-align: left;
   max-width: 80%;
-  padding-left: var(--spacing-lg);
 }
 
 figcaption {
   font-style: italic;
-  font-size: var(--font-size-small);
-  padding-bottom: var(--spacing-lg);
-  text-align: var(--text-align-default);
+  font-size: .9rem;
+  padding-bottom: 25px;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  max-height: 600px;
-  display: block;
-  margin: 0 auto;
+  max-height: 600px; 
 }
 
-/* ===== Footer Styles ===== */
+nav {
+  background-color: #94a3b8;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 3px solid #475569;
+  border-bottom: 3px solid #475569;
+}
+
+nav a {
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background-color: #475569;
+  color: #f1f5f9;
+  border-radius: 5px;
+}
+
+main {
+  padding: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1.2rem;
+  color: #475569;
+}
+
+footer {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  text-align: center;
+  padding: 2rem 0;
+}
+
 footer ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
-  padding-left: 0;
+  gap: 1.5rem;
 }
 
 footer ul li a {
-  color: var(--color-accent);
+  color: #94a3b8;
   text-decoration: none;
-  transition: color var(--transition-normal);
+  transition: color 0.3s;
 }
 
 footer ul li a:hover {
-  color: var(--color-text-light);
+  color: #f1f5f9;
 }
 
 footer p {
-  margin-top: var(--spacing-sm);
-  font-size: var(--font-size-base);
-  text-align: var(--text-align-header);
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
-/* ===== Utility Classes ===== */
-.container {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-  text-align: var(--text-align-default);
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-left {
-  text-align: left !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
-
-.mt-1 { margin-top: var(--spacing-sm); }
-.mt-2 { margin-top: var(--spacing-md); }
-.mt-3 { margin-top: var(--spacing-lg); }
-.mb-1 { margin-bottom: var(--spacing-sm); }
-.mb-2 { margin-bottom: var(--spacing-md); }
-.mb-3 { margin-bottom: var(--spacing-lg); }
-
-/* ===== Media Queries ===== */
-/* Large Desktop */
-@media screen and (min-width: 1401px) {
-  :root {
-    --container-max-width: 1400px;
-  }
-}
+/* Media Queries */
 
 /* Desktop */
-@media screen and (min-width: 981px) and (max-width: 1400px) {
-  :root {
-    --container-max-width: 1200px;
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ){
+  main{
+      max-width: 1200px;
   }
 }
 
 /* Tablet */
-@media screen and (min-width: 601px) and (max-width: 980px) {
-  :root {
-    --container-max-width: 90%;
-    --font-size-h1: 2.2rem;
-    --font-size-h2: 1.8rem;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav a {
-    width: 100%;
-    text-align: center;
-  }
-  
-  ul {
-    padding-left: var(--spacing-md);
+@media screen and ( min-width: 601px ) and ( max-width: 980px ){
+  main{
+      max-width: 90%;
   }
 }
 
 /* Mobile */
-@media screen and (max-width: 600px) {
-  :root {
-    --container-max-width: 100%;
-    --font-size-h1: 2rem;
-    --font-size-h2: 1.6rem;
-    --font-size-body: 1rem;
-  }
-  
-  main {
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-  
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav a {
-    width: 100%;
-    text-align: center;
-  }
-  
-  footer ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  ul {
-    padding-left: var(--spacing-sm);
-  }
-}
-
-/* Print Styles */
-@media print {
-  body {
-    background-color: white;
-    color: black;
-  }
-  
-  header, nav, footer {
-    background-color: white;
-    color: black;
-    border: none;
-  }
-  
-  a {
-    text-decoration: underline;
-  }
-  
-  img {
-    max-height: none;
+@media screen and ( min-width: 370px ) and ( max-width: 600px ){
+  main{
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
   }
 }
