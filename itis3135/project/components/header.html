@@ -5,43 +5,12 @@
     </div>
     <nav>
         <ul>
-            <li><a href="../index.html" class="nav-link" data-page="index.html">Home</a></li>
-            <li><a href="../pages/current_exhibition.html" class="nav-link" data-page="pages/current_exhibition.html">Current Exhibition</a></li>
-            <li><a href="../pages/artists.html" class="nav-link" data-page="pages/artists.html">Artists</a></li>
-            <li><a href="../pages/gallery.html" class="nav-link" data-page="pages/gallery.html">Gallery</a></li>
-            <li><a href="../pages/past_exhibitions.html" class="nav-link" data-page="pages/past_exhibitions.html">Past Exhibitions</a></li>
-            <li><a href="../pages/contact.html" class="nav-link" data-page="pages/contact.html">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="./pages/current_exhibition.html">Current Exhibition</a></li>
+            <li><a href="./pages/artists.html">Artists</a></li>
+            <li><a href="./pages/gallery.html">Gallery</a></li>
+            <li><a href="./pages/past_exhibitions.html">Past Exhibitions</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
-
-<script>
-    // Function to adjust navigation links based on current URL
-    function adjustNavLinks() {
-        const currentPath = window.location.pathname;
-        const isInPagesDirectory = currentPath.includes('/pages/');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-            const targetPage = link.getAttribute('data-page');
-            
-            if (isInPagesDirectory) {
-                // If we're in the pages directory, links should go up one level
-                link.href = '../' + targetPage;
-            } else {
-                // If we're in the root project directory
-                link.href = targetPage;
-            }
-            
-            // Set active class based on current page
-            if (currentPath.endsWith(targetPage)) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    }
-    
-    // Run when the page loads
-    document.addEventListener('DOMContentLoaded', adjustNavLinks);
-</script> 
