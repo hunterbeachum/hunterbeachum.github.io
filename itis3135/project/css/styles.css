@@ -168,9 +168,10 @@ nav a:hover, nav .active {
 
 .gallery-item-info { padding: 1rem; }
 
-.item h3 {
+.item-title {
     margin: 10px 0;
     font-size: 1.2em;
+    font-family: 'Playfair Display', serif;
 }
 
 .artist-name {
@@ -216,9 +217,10 @@ nav a:hover, nav .active {
   backdrop-filter: blur(5px);
 }
 
-.exhibition-details h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+.exhibition-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .exhibition-date {
@@ -414,9 +416,10 @@ footer {
     z-index: 2;
 }
 
-.exhibition-gallery h3 {
+.gallery-title {
     margin-top: 0;
     color: #1e293b;
+    font-family: 'Playfair Display', serif;
 }
 
 .gallery-image {
