@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to open lightbox with an image
     function openLightbox(imgSrc) {
-        lightboxImg.setAttribute('data-src', imgSrc);
-        lightboxImg.src = imgSrc; // Set src after data-src
+        // Get the data-img attribute which contains the large image filename
+        const largeImgSrc = imgSrc.getAttribute('data-img');
+        // Construct the path to the large image
+        const fullImgPath = '../images/' + largeImgSrc + '.jpg';
+        
+        lightboxImg.setAttribute('data-src', fullImgPath);
+        lightboxImg.src = fullImgPath; // Set src after data-src
         lightbox.classList.add('active');
     }
 
@@ -15,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryImages = document.querySelectorAll('.gallery-img');
     galleryImages.forEach((img) => {
         img.addEventListener('click', () => {
-            openLightbox(img.src);
+            openLightbox(img);
         });
     });
 
@@ -23,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const exhibitionImg = document.getElementById('exhibition-img');
     if (exhibitionImg) {
         exhibitionImg.addEventListener('click', () => {
-            openLightbox(exhibitionImg.src);
+            openLightbox(exhibitionImg);
         });
     }
 
@@ -31,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryImg = document.getElementById('gallery-img');
     if (galleryImg) {
         galleryImg.addEventListener('click', () => {
-            openLightbox(galleryImg.src);
+            openLightbox(galleryImg);
         });
     }
 
