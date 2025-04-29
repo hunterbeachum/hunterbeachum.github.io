@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to open lightbox with an image
     function openLightbox(imgSrc) {
-        lightboxImg.src = imgSrc;
+        lightboxImg.setAttribute('data-src', imgSrc);
+        lightboxImg.src = imgSrc; // Set src after data-src
         lightbox.classList.add('active');
     }
 
     // Add click event to all gallery images
     const galleryImages = document.querySelectorAll('.gallery-img');
-    galleryImages.forEach(img => {
+    galleryImages.forEach((img) => {
         img.addEventListener('click', () => {
             openLightbox(img.src);
         });
