@@ -15,15 +15,21 @@
         <section class="current-exhibition">
             <h2>Current Exhibition</h2>
             <div class="exhibition-content">
-                <div class="exhibition-image">
-                    <img src="../images/placeholder4.jpg" alt="Current Exhibition">
-                </div>
                 <div class="exhibition-details">
-                    <h3>Exhibition Title</h3>
-                    <p class="exhibition-date">June 1 - July 31, 2023</p>
-                    <p>Description of the current exhibition and featured artists. This section provides an overview of the exhibition theme, featured works, and any special events associated with the exhibition.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-                    <p>Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.</p>
+                    <h3>Peaks of Perception: A Journey Through Mountain Landscapes</h3>
+                    <p class="exhibition-date">April 1 - May 31, 2025</p>
+                    <p>Experience the majesty of mountain landscapes through the eyes of contemporary artists. This exhibition explores the intersection of natural grandeur and human interpretation, featuring works that capture the ethereal beauty of alpine environments. From misty morning peaks to dramatic sunset silhouettes, each piece invites viewers to contemplate the timeless relationship between humanity and these ancient geological formations. The collection includes both traditional and innovative approaches to landscape painting, offering a diverse perspective on one of nature's most awe-inspiring subjects.</p>
+                    
+                    <p>Featured artists include Mei Zhang, whose oil paintings bridge Eastern and Western artistic traditions, and Erik Andersson, whose watercolor works capture the dramatic coastal scenes of his native Sweden. Together, these artists present a comprehensive exploration of mountain environments across different cultures and artistic styles.</p>
+                    
+                    <p>The exhibition also includes special events throughout its duration, including artist talks, painting demonstrations, and guided tours. On the opening night, April 1st, visitors will have the opportunity to meet the artists and gain insight into their creative processes and inspirations. The gallery will host a special "Sunset Viewing" event on May 15th, where selected works will be displayed in natural evening light to showcase their dynamic qualities.</p>
+                </div>
+            </div>
+            
+            <div class="exhibition-gallery">
+                <h3>Exhibition Preview</h3>
+                <div class="gallery-image">
+                    <img src="../images/gallery4.jpg" alt="Exhibition Preview" id="gallery-img">
                 </div>
             </div>
         </section>
@@ -31,6 +37,13 @@
 
     <div data-include="../components/footer.html"></div>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Enlarged Exhibition Image" id="lightbox-img">
+    </div>
+
     <script src="../scripts/HTMLInclude.min.js"></script>
+    <script src="../scripts/lightbox.js"></script>
 </body>
 </html> 
