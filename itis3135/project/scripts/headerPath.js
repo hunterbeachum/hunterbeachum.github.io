@@ -3,20 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get the current page path
     const currentPath = window.location.pathname;
     
+    // Detailed path debugging
+    console.log('Full URL:', window.location.href);
+    console.log('Pathname:', currentPath);
+    console.log('Pathname includes /project/pages/:', currentPath.includes('/project/pages/'));
+    console.log('Pathname includes /pages/:', currentPath.includes('/pages/'));
+    
     // Check if we're in the pages directory
     const isInPagesDirectory = currentPath.includes('/project/pages/');
-    
-    // Debug logging
-    console.log('Current path:', currentPath);
-    console.log('Is in pages directory:', isInPagesDirectory);
+    console.log('Final isInPagesDirectory value:', isInPagesDirectory);
     
     // Get all navigation links
     const navLinks = document.querySelectorAll('.nav-link');
+    console.log('Number of nav links found:', navLinks.length);
     
     // Adjust paths based on current location
     navLinks.forEach((link) => {
         const originalPath = link.getAttribute('data-path');
-        console.log('Original path:', originalPath);
+        console.log('Processing link:', link.textContent, 'Original path:', originalPath);
         
         if (isInPagesDirectory) {
             // If in pages directory
