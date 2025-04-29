@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname;
     
     // Check if we're in the pages directory
-    const isInPagesDirectory = currentPath.includes('/pages/');
+    const isInPagesDirectory = currentPath.includes('/project/pages/');
     
     // Get all navigation links
     const navLinks = document.querySelectorAll('.nav-link');
@@ -14,12 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalPath = link.getAttribute('data-path');
         
         if (isInPagesDirectory) {
-            // If in pages directory, add ../ to paths that don't start with ../
-            if (!originalPath.startsWith('../') && originalPath !== 'index.html') {
-                link.href = '../' + originalPath;
-            } else if (originalPath === 'index.html') {
-                // Special case for home link - needs to go up one level
+            // If in pages directory
+            if (originalPath === 'index.html') {
+                // Home link needs to go up one level
                 link.href = '../index.html';
+            } else if (originalPath.startsWith('pages/')) {
+                // Remove the 'pages/' prefix since we're already in that directory
+                link.href = originalPath.replace('pages/', '');
             }
         } else {
             // If in root directory, use the original path
