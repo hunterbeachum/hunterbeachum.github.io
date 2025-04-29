@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.href = '../index.html';
             } else if (originalPath.startsWith('pages/')) {
                 // Remove the 'pages/' prefix since we're already in that directory
-                link.href = originalPath.replace('pages/', '');
+                link.href = originalPath.replace('pages/', '../');
             }
         } else {
             // If in root directory, use the original path
