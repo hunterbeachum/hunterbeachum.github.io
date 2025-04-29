@@ -168,6 +168,10 @@ nav a:hover, nav .active {
 
 .gallery-item-info { padding: 1rem; }
 
+.item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
 
 .artist-name {
   font-weight: 500;
@@ -355,10 +359,10 @@ footer {
   cursor: pointer;
 }
 
-.lightbox.active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.lightbox[class*="active"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox img {
@@ -411,9 +415,8 @@ footer {
 }
 
 .exhibition-gallery h3 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    margin-top: 0;
+    color: #1e293b;
 }
 
 .gallery-image {
