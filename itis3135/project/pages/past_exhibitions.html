@@ -21,11 +21,16 @@
             <div class="exhibition-item">
                 <div class="exhibition-date">December 2024</div>
                 <div class="exhibition-content">
-                    <img src="../images/placeholder1.jpg" alt="Winter Reflections Exhibition">
                     <div class="exhibition-details">
-                        <h3>Winter Reflections</h3>
+                        <h3 class="exhibition-title">Winter Reflections</h3>
                         <p class="exhibition-artists">Featuring works by Sarah Chen, Michael Rodriguez, and Emma Thompson</p>
-                        <p class="exhibition-description">A contemplative exploration of winter landscapes and the human experience through various artistic mediums.</p>
+                        <p class="exhibition-description">A contemplative exploration of winter landscapes and the human experience through various artistic mediums. From frost-kissed branches to the quiet solitude of snow-covered fields, each piece captures the essence of winter's transformative power. The exhibition featured a special installation that allowed visitors to experience the interplay of light and ice in real-time.</p>
+                    </div>
+                </div>
+                <div class="exhibition-gallery">
+                    <h3 class="gallery-title">Exhibition Highlights</h3>
+                    <div class="gallery-image">
+                        <img src="../images/gallery1.jpg" alt="Winter Reflections Exhibition" id="gallery-img-1" class="gallery-img">
                     </div>
                 </div>
             </div>
@@ -33,11 +38,16 @@
             <div class="exhibition-item">
                 <div class="exhibition-date">October 2024</div>
                 <div class="exhibition-content">
-                    <img src="../images/placeholder2.jpg" alt="Urban Perspectives Exhibition">
                     <div class="exhibition-details">
-                        <h3>Urban Perspectives</h3>
+                        <h3 class="exhibition-title">Urban Perspectives</h3>
                         <p class="exhibition-artists">Featuring works by James Wilson, Lisa Park, and David Martinez</p>
-                        <p class="exhibition-description">Contemporary artists interpret the modern cityscape through their unique lenses.</p>
+                        <p class="exhibition-description">Contemporary artists interpret the modern cityscape through their unique lenses. The exhibition explored themes of urban development, social interaction, and the relationship between architecture and human experience. A special augmented reality component allowed visitors to see alternative interpretations of the city spaces.</p>
+                    </div>
+                </div>
+                <div class="exhibition-gallery">
+                    <h3 class="gallery-title">Exhibition Highlights</h3>
+                    <div class="gallery-image">
+                        <img src="../images/gallery6.jpg" alt="Urban Perspectives Exhibition" id="gallery-img-2" class="gallery-img">
                     </div>
                 </div>
             </div>
@@ -45,11 +55,16 @@
             <div class="exhibition-item">
                 <div class="exhibition-date">August 2024</div>
                 <div class="exhibition-content">
-                    <img src="../images/placeholder3.jpg" alt="Abstract Emotions Exhibition">
                     <div class="exhibition-details">
-                        <h3>Abstract Emotions</h3>
+                        <h3 class="exhibition-title">Abstract Emotions</h3>
                         <p class="exhibition-artists">Featuring works by Rachel Green, Thomas Brown, and Maria Garcia</p>
-                        <p class="exhibition-description">An exploration of human emotions through abstract forms and vibrant colors.</p>
+                        <p class="exhibition-description">An exploration of human emotions through abstract forms and vibrant colors. The exhibition featured interactive installations that responded to visitors' movements, creating a dynamic dialogue between the artwork and the viewer. Each piece was accompanied by audio elements that enhanced the emotional impact of the visual experience.</p>
+                    </div>
+                </div>
+                <div class="exhibition-gallery">
+                    <h3 class="gallery-title">Exhibition Highlights</h3>
+                    <div class="gallery-image">
+                        <img src="../images/gallery2.jpg" alt="Abstract Emotions Exhibition" id="gallery-img-3" class="gallery-img">
                     </div>
                 </div>
             </div>
@@ -57,11 +72,16 @@
             <div class="exhibition-item">
                 <div class="exhibition-date">June 2024</div>
                 <div class="exhibition-content">
-                    <img src="../images/placeholder4.jpg" alt="Nature's Voice Exhibition">
                     <div class="exhibition-details">
-                        <h3>Nature's Voice</h3>
+                        <h3 class="exhibition-title">Nature's Voice</h3>
                         <p class="exhibition-artists">Featuring works by Alex Turner, Sophia Lee, and Carlos Rivera</p>
-                        <p class="exhibition-description">Artists respond to environmental themes through various artistic expressions.</p>
+                        <p class="exhibition-description">Artists respond to environmental themes through various artistic expressions. The exhibition included a living wall installation that changed with the seasons, and a soundscape composed of natural elements. Each piece was accompanied by information about the environmental impact it addressed.</p>
+                    </div>
+                </div>
+                <div class="exhibition-gallery">
+                    <h3 class="gallery-title">Exhibition Highlights</h3>
+                    <div class="gallery-image">
+                        <img src="../images/gallery5.jpg" alt="Nature's Voice Exhibition" id="gallery-img-4" class="gallery-img">
                     </div>
                 </div>
             </div>
@@ -69,11 +89,16 @@
             <div class="exhibition-item">
                 <div class="exhibition-date">April 2024</div>
                 <div class="exhibition-content">
-                    <img src="../images/placeholder5.jpg" alt="Cultural Fusion Exhibition">
                     <div class="exhibition-details">
-                        <h3>Cultural Fusion</h3>
+                        <h3 class="exhibition-title">Cultural Fusion</h3>
                         <p class="exhibition-artists">Featuring works by Yuki Tanaka, Ahmed Hassan, and Maria Silva</p>
-                        <p class="exhibition-description">A celebration of diverse cultural perspectives through contemporary art.</p>
+                        <p class="exhibition-description">A celebration of diverse cultural perspectives through contemporary art. The exhibition featured collaborative works that blended traditional techniques with modern approaches. Interactive workshops allowed visitors to learn about different cultural art forms and create their own fusion pieces.</p>
+                    </div>
+                </div>
+                <div class="exhibition-gallery">
+                    <h3 class="gallery-title">Exhibition Highlights</h3>
+                    <div class="gallery-image">
+                        <img src="../images/gallery3.jpg" alt="Cultural Fusion Exhibition" id="gallery-img-5" class="gallery-img">
                     </div>
                 </div>
             </div>
@@ -82,6 +107,12 @@
 
     <div data-include="../components/footer.html"></div>
 
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="" alt="Enlarged artwork view">
+    </div>
+
     <script src="../scripts/HTMLInclude.min.js"></script>
+    <script src="../scripts/lightbox.js"></script>
 </body>
 </html> 
