@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     
     // Adjust paths based on current location
-    navLinks.forEach(link => {
+    navLinks.forEach((link) => {
         const originalPath = link.getAttribute('data-path');
         
         if (isInPagesDirectory) {
