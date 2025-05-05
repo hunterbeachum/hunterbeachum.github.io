@@ -112,7 +112,7 @@ nav a {
 }
 
 nav a.nav-link:hover,
-nav a.nav-link.active {
+nav a.active {
   background-color: #0f172a;
   color: #f1f5f9;
   transform: translateY(-2px);
