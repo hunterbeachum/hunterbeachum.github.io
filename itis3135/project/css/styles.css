@@ -111,8 +111,8 @@ nav a {
   font-weight: 500;
 }
 
-nav a.nav-link:hover,
-nav a.active {
+.nav-link:hover,
+.active {
   background-color: #0f172a;
   color: #f1f5f9;
   transform: translateY(-2px);
